@@ -1,36 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 
 <!--
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: zeroth Checks
+    Checkstyle-Configuration: Kuzumeji Checks
     Description: none
 -->
 <module name="Checker">
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
-    <module name="FileContentsHolder"/>
     <module name="AnnotationUseStyle"/>
     <module name="MissingDeprecated"/>
     <module name="MissingOverride"/>
     <module name="PackageAnnotation"/>
     <module name="SuppressWarnings"/>
+    <module name="AnnotationLocation"/>
     <module name="JavadocMethod">
       <property name="suppressLoadErrors" value="true"/>
     </module>
     <module name="JavadocStyle">
-      <property name="checkEmptyJavadoc" value="true"/>
-      <property name="checkFirstSentence" value="false"/>
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     <module name="JavadocType"/>
     <module name="JavadocVariable"/>
     <module name="WriteTag"/>
-    <module name="AbstractClassName">
-      <metadata name="net.sf.eclipsecs.core.comment" value="Abstract, Factory"/>
-      <property name="format" value="^Abstract.*$"/>
+    <module name="NonEmptyAtclauseDescription"/>
+    <module name="JavadocTagContinuationIndentation"/>
+    <module name="SummaryJavadoc">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
+    <module name="AtclauseOrder"/>
+    <module name="JavadocParagraph"/>
+    <module name="SingleLineJavadoc"/>
+    <module name="AbstractClassName"/>
     <module name="ClassTypeParameterName"/>
     <module name="ConstantName"/>
     <module name="LocalFinalVariableName"/>
@@ -38,113 +44,154 @@
     <module name="MemberName"/>
     <module name="MethodName"/>
     <module name="MethodTypeParameterName"/>
+    <module name="InterfaceTypeParameterName"/>
     <module name="PackageName"/>
     <module name="ParameterName"/>
     <module name="StaticVariableName"/>
-    <module name="TypeName">
-      <property name="format" value="^[A-Z][a-zA-Z0-9_]*$"/>
-    </module>
+    <module name="TypeName"/>
+    <module name="AbbreviationAsWordInName"/>
+    <module name="de.unkrig.cscontrib.checks.NameSpelling"/>
     <module name="AvoidStarImport">
-      <property name="allowStaticMemberImports" value="true"/>
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     <module name="AvoidStaticImport">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     <module name="IllegalImport"/>
-    <module name="ImportOrder">
-      <property name="option" value="top"/>
-      <property name="groups" value="java,javax,org,net,com"/>
-    </module>
+    <module name="ImportOrder"/>
     <module name="RedundantImport"/>
     <module name="UnusedImports"/>
     <module name="ImportControl">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
+    <module name="CustomImportOrder"/>
     <module name="AnonInnerLength"/>
     <module name="ExecutableStatementCount">
       <property name="tokens" value="INSTANCE_INIT,STATIC_INIT,METHOD_DEF,CTOR_DEF"/>
     </module>
-    <module name="LineLength">
-      <property name="severity" value="ignore"/>
-      <property name="max" value="120"/>
-      <property name="tabWidth" value="4"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
+    <module name="LineLength"/>
     <module name="MethodLength"/>
     <module name="ParameterNumber"/>
     <module name="OuterTypeNumber"/>
     <module name="MethodCount"/>
-    <module name="GenericWhitespace">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
-    <module name="EmptyForInitializerPad">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
-    <module name="EmptyForIteratorPad">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
-    <module name="NoWhitespaceAfter">
-      <property name="severity" value="ignore"/>
-      <property name="tokens" value="BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
-    <module name="NoWhitespaceBefore">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
-    <module name="OperatorWrap">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
-    <module name="MethodParamPad">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
-    <module name="ParenPad">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
+    <module name="GenericWhitespace"/>
+    <module name="EmptyForInitializerPad"/>
+    <module name="EmptyForIteratorPad"/>
+    <module name="NoWhitespaceAfter"/>
+    <module name="NoWhitespaceBefore"/>
+    <module name="OperatorWrap"/>
+    <module name="MethodParamPad"/>
+    <module name="ParenPad"/>
     <module name="TypecastParenPad">
-      <property name="severity" value="ignore"/>
       <property name="tokens" value="RPAREN,TYPECAST"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module name="WhitespaceAfter">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
+    <module name="WhitespaceAfter"/>
     <module name="WhitespaceAround">
+      <property name="tokens" value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,COLON,DIV,DIV_ASSIGN,DO_WHILE,EQUAL,GE,GT,LAND,LCURLY,LE,LITERAL_ASSERT,LITERAL_CATCH,LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_FOR,LITERAL_IF,LITERAL_RETURN,LITERAL_SYNCHRONIZED,LITERAL_TRY,LITERAL_WHILE,LOR,LT,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,QUESTION,RCURLY,SL,SLIST,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN,TYPE_EXTENSION_AND,WILDCARD_TYPE"/>
+    </module>
+    <module name="EmptyLineSeparator">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module name="RegexpSinglelineJava">
-      <metadata name="net.sf.eclipsecs.core.comment" value="(@version|@since)"/>
-      <property name="format" value="(@version|@since)"/>
-      <property name="message" value="bad practice"/>
+    <module name="SeparatorWrap"/>
+    <module name="de.unkrig.cscontrib.checks.Alignment">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.CppCommentAlignment">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.ParenPad">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.Whitespace">
+      <property name="severity" value="ignore"/>
+      <property name="noWhitespaceBefore" value="class__class_literal,colon__case,colon__default,colon__labeled_stat,comma,dot__import,dot__package_decl,dot__qualified_type,dot__selector,ellipsis,l_angle__meth_invocation_type_args,l_angle__type_args,l_angle__type_params,l_brack__array_decl,l_brack__index,l_paren__anno,l_paren__anno_elem_decl,l_paren__meth_invocation,l_paren__params,name__anno,post_decr,post_incr,r_angle__meth_decl_type_params,r_angle__meth_invocation_type_args,r_angle__type_args,r_angle__type_params,r_brack__array_decl,r_brack__index,r_curly__empty_anno_array_init,r_curly__empty_anon_class,r_curly__empty_array_init,r_curly__empty_catch,r_curly__empty_lambda,r_curly__empty_meth_decl,r_curly__empty_type_decl,r_curly__enum_const_decl,r_paren__anno,r_paren__anno_elem_decl,r_paren__cast,r_paren__catch,r_paren__do_while,r_paren__for,r_paren__for_no_update,r_paren__if,r_paren__meth_invocation,r_paren__params,r_paren__parenthesized,r_paren__resources,semi__abstract_meth_decl,semi__anno_elem_decl,semi__enum_decl,semi__field_decl,semi__for_condition_no_update,semi__for_condition_update,semi__for_init_condition,semi__for_init_no_condition,semi__for_no_condition_no_update,semi__for_no_condition_update,semi__for_no_init_condition,semi__for_no_init_no_condition,semi__import,semi__package_decl,semi__resources,semi__statement,semi__static_import,star__type_import_on_demand"/>
+      <property name="whitespaceAfter" value="abstract,and__expr,and__type_bound,and_assign,assert,assign__assignment,assign__var_decl,case,catch,class__class_decl,colon__case,colon__default,colon__enhanced_for,colon__labeled_stat,colon__ternary,comma,conditional_and,conditional_or,default__anno_elem,default__mod,divide,divide_assign,do,ellipsis,else,enum,equal,extends__type,extends__type_bound,final,finally,for,greater,greater_equal,if,implements,import,import__static_import,instanceof,interface,l_curly__anno_array_init,l_curly__anon_class,l_curly__array_init,l_curly__block,l_curly__catch,l_curly__do,l_curly__enum_const,l_curly__finally,l_curly__for,l_curly__if,l_curly__instance_init,l_curly__labeled_stat,l_curly__meth_decl,l_curly__static_init,l_curly__switch,l_curly__synchronized,l_curly__try,l_curly__type_decl,l_curly__while,left_shift,left_shift_assign,less,less_equal,minus__additive,minus_assign,modulo,modulo_assign,multiply,multiply_assign,name__anno_member,native,new,not_equal,or,or_assign,package,plus__additive,plus_assign,private,protected,public,question__ternary,r_angle__meth_decl_type_params,r_curly__block,r_curly__catch,r_curly__do,r_curly__else,r_curly__empty_catch,r_curly__empty_meth_decl,r_curly__empty_type_decl,r_curly__finally,r_curly__for,r_curly__if,r_curly__instance_init,r_curly__labeled_stat,r_curly__meth_decl,r_curly__static_init,r_curly__switch,r_curly__synchronized,r_curly__try,r_curly__type_decl,r_curly__while,r_paren__cast,r_paren__catch,r_paren__if,r_paren__resources,return__expr,right_shift,right_shift_assign,semi__abstract_meth_decl,semi__anno_elem_decl,semi__empty_stat,semi__enum_decl,semi__field_decl,semi__for_condition_update,semi__for_init_condition,semi__for_no_condition_update,semi__for_no_init_condition,semi__import,semi__package_decl,semi__resources,semi__statement,semi__static_import,semi__type_decl,static__static_import,static__mod,static__static_init,super__type_bound,switch,synchronized__mod,synchronized__synchronized,throw,throws,transient,try,unsigned_right_shift,unsigned_right_shift_assign,volatile,while__do,while__while,xor,xor_assign"/>
+      <property name="noWhitespaceAfter" value="at__anno,at__anno_decl,bitwise_complement,default__switch,dot__import,dot__package_decl,dot__qualified_type,dot__selector,l_angle__meth_decl_type_params,l_angle__meth_invocation_type_args,l_angle__type_args,l_angle__type_params,l_brack__array_decl,l_brack__index,l_curly__empty_anno_array_init,l_curly__empty_anon_class,l_curly__empty_array_init,l_curly__empty_catch,l_curly__empty_meth_decl,l_curly__empty_type_decl,l_paren__anno,l_paren__anno_elem_decl,l_paren__cast,l_paren__catch,l_paren__do_while,l_paren__for,l_paren__for_no_init,l_paren__if,l_paren__lambda_params,l_paren__meth_invocation,l_paren__params,l_paren__parenthesized,l_paren__resources,logical_complement,minus__unary,name__anno_elem_decl,name__ctor_decl,name__import_component,name__import_type,name__inferred_param,name__meth_decl,name__package_decl,name__param,plus__unary,pre_decr,pre_incr,r_angle__meth_invocation_type_args,r_paren__do_while,return__no_expr,semi__for_condition_no_update,semi__for_init_no_condition,semi__for_no_condition_no_update,semi__for_no_init_no_condition,star__type_import_on_demand,super__ctor_call,super__expr,this__ctor_call"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WhitespaceAround">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapAnnotationCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapAnonymousClassCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapArrayInitCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapBinaryOperatorCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapClassCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapCtorCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapDoCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapEnumCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapFieldCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapInterfaceCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapLocalVariableCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapMethodCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapPackageCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapSwitchBlockStmtGroupCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="de.unkrig.cscontrib.checks.WrapTryCheck">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     <module name="ModifierOrder"/>
     <module name="RedundantModifier"/>
     <module name="AvoidNestedBlocks"/>
     <module name="EmptyBlock"/>
+    <module name="EmptyCatchBlock"/>
     <module name="LeftCurly"/>
     <module name="NeedBraces"/>
     <module name="RightCurly"/>
-    <module name="AvoidInlineConditionals">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
+    <module name="AvoidInlineConditionals"/>
     <module name="CovariantEquals"/>
     <module name="DefaultComesLast"/>
     <module name="DeclarationOrder"/>
-    <module name="DoubleCheckedLocking">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
     <module name="EmptyStatement"/>
     <module name="EqualsAvoidNull"/>
     <module name="EqualsHashCode"/>
@@ -153,9 +200,7 @@
     <module name="FinalLocalVariable"/>
     <module name="HiddenField"/>
     <module name="IllegalInstantiation"/>
-    <module name="IllegalCatch">
-      <property name="illegalClassNames" value="java.lang.Throwable, java.lang.Exception, java.lang.Error, java.lang.RuntimeException"/>
-    </module>
+    <module name="IllegalCatch"/>
     <module name="IllegalThrows"/>
     <module name="IllegalToken">
       <property name="tokens" value="POST_INC,POST_DEC,LITERAL_SWITCH"/>
@@ -165,9 +210,15 @@
       <property name="tokens" value="METHOD_DEF,PARAMETER_DEF,VARIABLE_DEF"/>
     </module>
     <module name="InnerAssignment"/>
-    <module name="JUnitTestCase"/>
+    <module name="JUnitTestCase">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
     <module name="MagicNumber"/>
-    <module name="MissingCtor"/>
+    <module name="MissingCtor">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
     <module name="MissingSwitchDefault"/>
     <module name="ModifiedControlVariable"/>
     <module name="MultipleStringLiterals"/>
@@ -179,29 +230,21 @@
     <module name="NoFinalizer"/>
     <module name="PackageDeclaration"/>
     <module name="ParameterAssignment"/>
-    <module name="RedundantThrows">
-      <property name="suppressLoadErrors" value="true"/>
-    </module>
-    <module name="RequireThis">
-      <property name="checkMethods" value="false"/>
-    </module>
+    <module name="RequireThis"/>
     <module name="ReturnCount"/>
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
     <module name="StringLiteralEquality"/>
     <module name="SuperClone"/>
     <module name="SuperFinalize"/>
-    <module name="ArrayTrailingComma">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
+    <module name="ArrayTrailingComma"/>
     <module name="UnnecessaryParentheses"/>
     <module name="OneStatementPerLine"/>
-    <module name="DesignForExtension">
-      <metadata name="net.sf.eclipsecs.core.comment" value="because CANNOT use CDI and AOP"/>
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-    </module>
+    <module name="VariableDeclarationUsageDistance"/>
+    <module name="OverloadMethodsDeclarationOrder"/>
+    <module name="de.unkrig.cscontrib.checks.InnerAssignment"/>
+    <module name="de.unkrig.cscontrib.checks.ZeroParameterSuperconstructorInvocation"/>
+    <module name="DesignForExtension"/>
     <module name="FinalClass"/>
     <module name="InnerTypeLast"/>
     <module name="HideUtilityClassConstructor"/>
@@ -209,6 +252,7 @@
     <module name="MutableException"/>
     <module name="ThrowsCount"/>
     <module name="VisibilityModifier"/>
+    <module name="OneTopLevelClass"/>
     <module name="BooleanExpressionComplexity"/>
     <module name="ClassDataAbstractionCoupling"/>
     <module name="ClassFanOutComplexity"/>
@@ -218,83 +262,25 @@
     <module name="ArrayTypeStyle"/>
     <module name="DescendantToken"/>
     <module name="FinalParameters"/>
-    <module name="Indentation">
+    <module name="Indentation"/>
+    <module name="TodoComment"/>
+    <module name="TrailingComment"/>
+    <module name="UncommentedMain">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module name="TodoComment"/>
-    <module name="TrailingComment"/>
-    <module name="UncommentedMain"/>
     <module name="UpperEll"/>
     <module name="Regexp">
-      <metadata name="net.sf.eclipsecs.core.comment" value="eliminate (FUCK|HACK)"/>
-      <property name="format" value="(FUCK|HACK)"/>
-      <property name="illegalPattern" value="true"/>
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     <module name="OuterTypeFilename"/>
+    <module name="AvoidEscapedUnicodeCharacters"/>
   </module>
   <module name="JavadocPackage"/>
-  <module name="Header">
-    <property name="header" value="// ========================================================================\n// Copyright (C) zeroth Project Team. All rights reserved.\n// GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007\n// http://www.gnu.org/licenses/agpl-3.0.txt\n// ========================================================================\n"/>
-  </module>
   <module name="FileLength"/>
-  <module name="FileTabCharacter">
-    <property name="severity" value="ignore"/>
-    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
-  </module>
-  <module name="RegexpMultiline">
-    <metadata name="net.sf.eclipsecs.core.comment" value=".printStackTrace"/>
-    <property name="format" value=".printStackTrace"/>
-    <property name="message" value="bad practice."/>
-  </module>
-  <module name="RegexpMultiline">
-    <metadata name="net.sf.eclipsecs.core.comment" value="System.(out|err).print"/>
-    <property name="format" value="System.(out|err).print"/>
-    <property name="message" value="bad practice."/>
-  </module>
-  <module name="RegexpMultiline">
-    <metadata name="net.sf.eclipsecs.core.comment" value="System.exit"/>
-    <property name="format" value="System.exit"/>
-    <property name="message" value="bad practice"/>
-  </module>
-  <module name="SeverityMatchFilter"/>
-  <module name="SuppressionFilter"/>
-  <module name="SuppressionCommentFilter"/>
-  <module name="SuppressWithNearbyCommentFilter">
-    <metadata name="net.sf.eclipsecs.core.comment" value="CHECKSTYLE IGNORE THIS LINE"/>
-    <property name="commentFormat" value="CHECKSTYLE IGNORE THIS LINE"/>
-  </module>
-  <module name="SuppressWithNearbyCommentFilter">
-    <metadata name="net.sf.eclipsecs.core.comment" value="CHECKSTYLE IGNORE NEXT LINE"/>
-    <property name="commentFormat" value="CHECKSTYLE IGNORE NEXT LINE"/>
-    <property name="influenceFormat" value="1"/>
-  </module>
-  <module name="SuppressWithNearbyCommentFilter">
-    <metadata name="net.sf.eclipsecs.core.comment" value="CHECKSTYLE IGNORE (\w+) FOR NEXT (\d+) LINES"/>
-    <property name="commentFormat" value="CHECKSTYLE IGNORE (\w+) FOR NEXT (\d+) LINES"/>
-    <property name="checkFormat" value="$1"/>
-    <property name="influenceFormat" value="$2"/>
-  </module>
-  <module name="SuppressWithNearbyCommentFilter">
-    <metadata name="net.sf.eclipsecs.core.comment" value="OK to catch (\w+) here"/>
-    <property name="commentFormat" value="OK to catch (\w+) here"/>
-    <property name="checkFormat" value="IllegalCatchCheck"/>
-    <property name="messageFormat" value="$1"/>
-    <property name="influenceFormat" value="-1"/>
-  </module>
-  <module name="SuppressWithNearbyCommentFilter">
-    <metadata name="net.sf.eclipsecs.core.comment" value="OK to throws (\w+) here"/>
-    <property name="commentFormat" value="OK to throws (\w+) here"/>
-    <property name="checkFormat" value="ThrowsCountCheck"/>
-    <property name="messageFormat" value="$1"/>
-    <property name="influenceFormat" value="-1"/>
-  </module>
-  <module name="StrictDuplicateCode">
-    <metadata name="net.sf.eclipsecs.core.comment" value="dup-of 20 lines over"/>
-    <property name="min" value="20"/>
-  </module>
-  <module name="NewlineAtEndOfFile">
-    <property name="lineSeparator" value="crlf"/>
-  </module>
+  <module name="FileTabCharacter"/>
+  <module name="NewlineAtEndOfFile"/>
   <module name="Translation"/>
+  <module name="UniqueProperties"/>
 </module>
