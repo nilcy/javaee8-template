@@ -1,1 +1,1 @@
-# javaee8-template
+# JavaEE8-Template
