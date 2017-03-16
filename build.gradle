@@ -3,26 +3,21 @@
 // GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007
 // http://www.gnu.org/licenses/agpl-3.0.txt
 // ========================================================================
-
 // プラグイン
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
-
 // ルール
 def defaultEncoding = 'utf-8'
 def jdkVersion = '1.8'
-
 // ルール適用
 sourceCompatibility = jdkVersion
 targetCompatibility = jdkVersion
 [compileJava, compileTestJava, javadoc]*.options*.encoding = defaultEncoding
-
 // リポジトリ
 repositories {
     jcenter()
 }
-
 // ライブラリ
 dependencies {
     compile 'com.google.guava:guava:21.0'
@@ -30,7 +25,5 @@ dependencies {
     compile 'ch.qos.logback:logback-classic:1.2.1'
     testCompile 'junit:junit:4.12'
 }
-
 // メインクラス
 mainClassName = 'com.github.kuzumeji.App'
-

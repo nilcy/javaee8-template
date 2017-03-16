@@ -1,14 +1,14 @@
 # JavaEE8-Template
 
-## ŠJ”­ŠÂ‹«‚Ì\’z
+## é–‹ç™ºç’°å¢ƒã®æ§‹ç¯‰
 
-* Gradle‚ğƒCƒ“ƒXƒg[ƒ‹‚µ‚Ü‚·B
-* JavaƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÌGradleƒvƒƒWƒFƒNƒg‚ğì¬‚µ‚Ü‚·B
+* Gradleã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¾ã™ã€‚
+* Javaã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®Gradleãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã—ã¾ã™ã€‚
 `$ gradle init --type java-application`
-* ƒrƒ‹ƒhİ’è(build.gradle)‚Ö `apply plugin: 'eclipse'` ‚ğ’Ç‰Á‚µ‚Ü‚·B
-* EclipseƒvƒƒWƒFƒNƒg‚ğì¬‚µ‚Ü‚·B
+* ãƒ“ãƒ«ãƒ‰è¨­å®š(build.gradle)ã¸ `apply plugin: 'eclipse'` ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+* Eclipseãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã—ã¾ã™ã€‚
 `$ gradle eclipse`
-* Eclipse‚©‚çŠY“–ƒvƒƒWƒFƒNƒg‚ğƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B
-* yŠY“–ƒvƒƒWƒFƒNƒgz¨y‰EƒNƒŠƒbƒNz¨yConfigurez¨yConvert to Gradle(STS) Projectz ‚ğÀs‚µ‚Ü‚·B
-* Gradle‚ğƒŠƒtƒŒƒbƒVƒ…‚µ‚Ü‚·B(Ctrl+F5)
+* Eclipseã‹ã‚‰è©²å½“ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+* ã€è©²å½“ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã€‘â†’ã€å³ã‚¯ãƒªãƒƒã‚¯ã€‘â†’ã€Configureã€‘â†’ã€Convert to Gradle(STS) Projectã€‘ ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
+* Gradleã‚’ãƒªãƒ•ãƒ¬ãƒƒã‚·ãƒ¥ã—ã¾ã™ã€‚(Ctrl+F5)
 
